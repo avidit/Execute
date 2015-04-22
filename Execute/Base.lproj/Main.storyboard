@@ -678,6 +678,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <segue destination="BBT-YH-rW0" kind="show" id="hrz-Qv-ptl"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teK-Rq-DUf">
                                 <rect key="frame" x="14" y="13" width="66" height="32"/>
@@ -700,6 +703,57 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="ZcO-cg-3Ai">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="1" id="BBT-YH-rW0" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" id="DM0-vx-kvH">
+                            <accessibility description="iOS"/>
+                        </tabViewItem>
+                        <tabViewItem identifier="" id="WEk-Z6-sTN"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="qrL-lX-XeH">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <tabViewItems/>
+                    </tabView>
+                    <connections>
+                        <segue destination="aQz-Ms-R9q" kind="relationship" relationship="tabItems" id="kaB-X6-IKs"/>
+                        <segue destination="HeY-3s-OOZ" kind="relationship" relationship="tabItems" id="orf-J1-qzr"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="PZi-aE-2f8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="1109"/>
+        </scene>
+        <!--iOS-->
+        <scene sceneID="iiz-Ih-9eW">
+            <objects>
+                <viewController title="iOS" id="aQz-Ms-R9q" sceneMemberID="viewController">
+                    <view key="view" id="NkD-oG-u3R">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="Dcf-dL-Bkp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="843"/>
+        </scene>
+        <!--Android-->
+        <scene sceneID="fge-S9-mjG">
+            <objects>
+                <viewController title="Android" id="HeY-3s-OOZ" sceneMemberID="viewController">
+                    <view key="view" id="Frx-16-4lb">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="wh6-BD-QL2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="1205"/>
         </scene>
     </scenes>
 </document>
