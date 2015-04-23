@@ -679,7 +679,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="BBT-YH-rW0" kind="show" id="hrz-Qv-ptl"/>
+                                    <segue destination="BBT-YH-rW0" kind="show" id="fjT-ZA-XhX"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="teK-Rq-DUf">
@@ -707,12 +707,13 @@
         <!--Tab View Controller-->
         <scene sceneID="ZcO-cg-3Ai">
             <objects>
-                <tabViewController selectedTabViewItemIndex="1" id="BBT-YH-rW0" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" id="BBT-YH-rW0" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" id="DM0-vx-kvH">
                             <accessibility description="iOS"/>
                         </tabViewItem>
                         <tabViewItem identifier="" id="WEk-Z6-sTN"/>
+                        <tabViewItem id="ouG-mG-g0l"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="qrL-lX-XeH">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -723,6 +724,7 @@
                     <connections>
                         <segue destination="aQz-Ms-R9q" kind="relationship" relationship="tabItems" id="kaB-X6-IKs"/>
                         <segue destination="HeY-3s-OOZ" kind="relationship" relationship="tabItems" id="orf-J1-qzr"/>
+                        <segue destination="WNj-78-sq8" kind="relationship" relationship="tabItems" id="wSF-9g-QTK"/>
                     </connections>
                 </tabViewController>
                 <customObject id="PZi-aE-2f8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -733,14 +735,142 @@
         <scene sceneID="iiz-Ih-9eW">
             <objects>
                 <viewController title="iOS" id="aQz-Ms-R9q" sceneMemberID="viewController">
-                    <view key="view" id="NkD-oG-u3R">
+                    <view key="view" id="B5L-dL-dS7">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cLr-yR-fHN">
+                                <rect key="frame" x="153" y="230" width="125" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="Sharks" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="b7y-Rq-Cj5" id="BOc-9o-BHh">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="nZS-sn-iZ2">
+                                        <items>
+                                            <menuItem title="Panthers" id="f9H-It-QSN"/>
+                                            <menuItem title="Titans" id="HrH-Dc-HUX"/>
+                                            <menuItem title="Sharks" state="on" id="b7y-Rq-Cj5"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cch-vC-wsv">
+                                <rect key="frame" x="20" y="235" width="122" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select your device:" id="cRN-PI-tq2">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C91-G6-n4l">
+                                <rect key="frame" x="20" y="263" width="105" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select your app:" id="Zde-Mi-zFh">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Lp-wo-EsV">
+                                <rect key="frame" x="153" y="260" width="125" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="TV GO" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="kwq-eG-Vaf" id="VYI-2e-jfF">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="nyf-5F-0so">
+                                        <items>
+                                            <menuItem title="XFINITY TV" id="Hlk-7n-RX4"/>
+                                            <menuItem title="TV GO" state="on" id="kwq-eG-Vaf"/>
+                                            <menuItem title="My Account" id="ZvN-Mj-yVv"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25n-qn-qA8">
+                                <rect key="frame" x="155" y="203" width="120" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="192.168.1.100" usesSingleLineMode="YES" bezelStyle="round" id="gTm-kj-LL3">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="yMX-nz-9gi"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNl-Y8-AeH">
+                                <rect key="frame" x="100" y="206" width="49" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="https://" id="DDs-Bs-5Uj">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qpb-LJ-MRL">
+                                <rect key="frame" x="281" y="206" width="46" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=":37265" id="Nk6-dR-RCU">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3o3-hL-nsN">
+                                <rect key="frame" x="20" y="178" width="117" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Working directory:" id="d9L-2r-QkF">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WyY-nH-2Kd">
+                                <rect key="frame" x="18" y="144" width="109" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Output directory:" id="ccO-bW-kim">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIW-wc-67B">
+                                <rect key="frame" x="20" y="206" width="75" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="IP Address:" id="pRj-Nm-Gce">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="BBd-tZ-cNg">
+                                <rect key="frame" x="20" y="290" width="410" height="5"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="Dcf-dL-Bkp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="762" y="843"/>
+            <point key="canvasLocation" x="-524" y="1669"/>
+        </scene>
+        <!--Web-->
+        <scene sceneID="A7N-zJ-TaY">
+            <objects>
+                <viewController title="Web" showSeguePresentationStyle="single" id="WNj-78-sq8" sceneMemberID="viewController">
+                    <view key="view" id="p5k-b6-Jea">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-gG-sYO">
+                                <rect key="frame" x="175" y="298" width="96" height="5"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="mJ2-iq-qTC">
+                                <rect key="frame" x="20" y="289" width="410" height="5"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="kVK-HS-aYK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="1669"/>
         </scene>
         <!--Android-->
         <scene sceneID="fge-S9-mjG">
@@ -749,11 +879,19 @@
                     <view key="view" id="Frx-16-4lb">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="kLz-9x-a86">
+                                <rect key="frame" x="20" y="289" width="410" height="5"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="wh6-BD-QL2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="762" y="1205"/>
+            <point key="canvasLocation" x="75" y="1669"/>
         </scene>
     </scenes>
 </document>
